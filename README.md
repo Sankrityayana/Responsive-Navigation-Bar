@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
 
-A modern, fully responsive navigation bar built with vanilla HTML, CSS, and JavaScript. Features a sleek design with mobile hamburger menu, dropdown menus, search functionality, and smooth scrolling - all using a light multi-color theme with no gradients.
+A modern, fully responsive navigation bar built with vanilla HTML, CSS, and JavaScript. Features a sleek dark design with mobile hamburger menu, dropdown menus, search functionality, and smooth scrolling - all using a dark theme with teal accents.
 
 ## ✨ Features
 
@@ -28,13 +28,13 @@ A modern, fully responsive navigation bar built with vanilla HTML, CSS, and Java
 <details>
 <summary><strong>🎨 Design Features</strong></summary>
 
-- **Light Multi-Color Theme** - Blue, green, red, orange, teal accents
-- **No Gradients** - Clean solid color design
+- **Dark Theme** - Navy blue background with teal accents
+- **Modern Color Palette** - Dark gray, navy blue, and vibrant teal
 - **Smooth Animations** - Fade-ins, hover effects, transitions
-- **Scroll Reveal** - Elements animate on scroll
 - **Interactive Hover States** - Visual feedback on all elements
 - **Consistent Spacing** - Clean, professional layout
 - **Mobile-First Approach** - Optimized for mobile devices
+- **Icon-Only Mode** - On tablets, text is hidden showing only icons
 
 </details>
 
@@ -63,9 +63,11 @@ A modern, fully responsive navigation bar built with vanilla HTML, CSS, and Java
 - Smooth scroll animations
 
 ### Tablet View (≤1024px)
-- Adjusted spacing
-- Responsive layout
+- Icon-only navigation (text hidden)
+- Search bar hidden to save space
+- Compact layout with larger icons
 - Touch-friendly targets
+- No overflow issues
 
 ### Mobile View (≤768px)
 - Hamburger menu icon
@@ -144,20 +146,27 @@ The navbar includes:
 
 ### Change Colors
 
-Edit the color variables in `styles.css`:
+Edit the colors in `styles.css`:
 
 ```css
-/* Primary Colors */
---primary-blue: #3498db;
---primary-green: #27ae60;
---primary-red: #e74c3c;
---primary-orange: #f39c12;
---primary-teal: #1abc9c;
+/* Main navbar colors */
+.navbar {
+    background: #263159;  /* Navy blue */
+}
 
-/* Backgrounds */
---bg-light: #f8f9fa;
---bg-white: #ffffff;
---bg-dark: #2c3e50;
+.logo-text {
+    color: #20c997;  /* Teal */
+}
+
+.nav-link.active {
+    background: #20c997;  /* Teal accent */
+    color: #1a1d29;  /* Dark text */
+}
+
+.cta-btn {
+    background: #20c997;  /* Teal button */
+    color: #1a1d29;
+}
 ```
 
 ### Modify Breakpoints
@@ -165,10 +174,13 @@ Edit the color variables in `styles.css`:
 Adjust responsive breakpoints:
 
 ```css
-/* Large tablets and small desktops */
+/* Large tablets and small laptops */
+@media (max-width: 1200px) { }
+
+/* Medium tablets */
 @media (max-width: 1024px) { }
 
-/* Tablets and large phones */
+/* Small tablets and mobile */
 @media (max-width: 768px) { }
 
 /* Small phones */
@@ -183,7 +195,7 @@ In `index.html`:
 <li>
     <a href="#section" class="nav-link">
         <span class="nav-icon">🔗</span>
-        <span>New Section</span>
+        <span class="nav-text">New Section</span>
     </a>
 </li>
 ```
@@ -227,27 +239,27 @@ responsive-navigation-bar/
 
 ### File Details
 
-#### index.html (~280 lines)
+#### index.html (~95 lines)
 - Semantic HTML5 structure
-- Navigation with dropdown menus
-- Hero section with feature cards
-- Content sections (About, Services, Portfolio, Blog, Contact)
-- Footer with links
+- Clean navigation bar with dropdown menus
+- Search functionality
+- CTA button
 
-#### styles.css (~850 lines)
+#### styles.css (~450 lines)
 - CSS reset and base styles
-- Fixed navbar with scroll effects
-- Responsive grid layouts
+- Fixed navbar with dark theme
+- Responsive design for all screen sizes
 - Mobile hamburger menu styling
 - Dropdown menu animations
+- Icon-only mode for tablets
 - Comprehensive media queries
-- Hover and transition effects
+- Smooth hover and transition effects
 
-#### script.js (~320 lines)
+#### script.js (~135 lines)
 - Mobile menu toggle
 - Dropdown functionality
-- Search implementation
-- Smooth scrolling
+- Keyboard shortcuts
+- Touch-friendly interactions
 - Active link tracking
 - Keyboard shortcuts
 - Scroll reveal animations
@@ -274,42 +286,53 @@ responsive-navigation-bar/
 
 | Color | Hex Code | Usage |
 |-------|----------|-------|
-| Blue | `#3498db` | Primary accent, links, CTA section |
-| Green | `#27ae60` | CTA button, success states |
-| Red | `#e74c3c` | Feature card accent |
-| Orange | `#f39c12` | Feature card accent, search highlight |
-| Teal | `#1abc9c` | Feature accents |
+| Dark Navy | `#1a1d29` | Body background |
+| Navy Blue | `#263159` | Navbar background |
+| Dark Blue | `#1b2232` | Hover states, search bar |
+| Teal | `#20c997` | Primary accent, CTA button, active states |
+| Dark Teal | `#17a085` | CTA button hover |
 
-### Neutral Colors
+### Text Colors
 
 | Color | Hex Code | Usage |
 |-------|----------|-------|
-| White | `#ffffff` | Background, cards |
-| Light Gray | `#f8f9fa` | Alternate sections, search bar |
-| Dark | `#2c3e50` | Footer, text |
-| Text | `#333333` | Body text |
+| Light Gray | `#f5f6fa` | Primary text, nav links |
+| Muted Gray | `#bfc8e2` | Placeholder text |
+| Dark | `#1a1d29` | CTA button text, active link text |
 
 ## 📱 Responsive Behavior
 
-### Desktop (>1024px)
-- Full horizontal navigation
+### Desktop (>1200px)
+- Full horizontal navigation with text and icons
 - Dropdowns on hover
 - Integrated search bar
-- Large font sizes
+- Large CTA button
 - Wide content layout
 
-### Tablet (768px - 1024px)
-- Adjusted spacing
-- Slightly smaller elements
-- Touch-optimized targets
-- Flexible grid layouts
+### Large Tablets (1024px - 1200px)
+- Slightly reduced spacing
+- All elements still visible
+- Search bar compact
+- Smaller CTA button
+
+### Medium Tablets (768px - 1024px)
+- Icon-only navigation (text hidden)
+- Search bar hidden
+- Larger icons (1.3rem)
+- Compact layout
+- No overflow issues
 
 ### Mobile (≤768px)
 - Hamburger menu
 - Vertical navigation
 - Dropdown accordion
 - Search toggle button
-- Stacked layouts
+- Full-width elements
+### Mobile (≤768px)
+- Hamburger menu
+- Vertical navigation
+- Dropdown accordion
+- Search toggle button
 - Full-width elements
 
 ### Small Mobile (≤480px)
@@ -323,7 +346,7 @@ responsive-navigation-bar/
 
 ### 1. Navigation Bar
 - Fixed positioning
-- Transparent-to-solid on scroll
+- Dark theme with teal accents
 - Logo, menu, search, CTA
 - Responsive breakpoints
 
