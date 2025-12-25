@@ -15,6 +15,123 @@ body {
     padding-top: 70px;
 }
 
+/* === NAVBAR COLOR COMBINATION === */
+.navbar {
+    background: #263159;
+    box-shadow: 0 2px 15px rgba(38, 49, 89, 0.10);
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 25px rgba(38, 49, 89, 0.18);
+}
+
+.nav-logo a {
+    color: #f5f6fa;
+}
+
+.logo-text {
+    color: #ff9800;
+}
+
+.hamburger {
+    background: #ff9800;
+}
+
+.nav-link {
+    color: #f5f6fa;
+    background: transparent;
+}
+
+.nav-link:hover {
+    background: #1b2232;
+    color: #ff9800;
+}
+
+.nav-link.active {
+    background: #ff9800;
+    color: #263159;
+}
+
+.dropdown-menu {
+    background: #1b2232;
+    box-shadow: 0 8px 25px rgba(38, 49, 89, 0.18);
+}
+
+.dropdown-item {
+    color: #f5f6fa;
+}
+
+.dropdown-item:hover {
+    background: #263159;
+    color: #ff9800;
+}
+
+.nav-search {
+    background: #1b2232;
+    color: #f5f6fa;
+}
+
+.nav-search:focus-within {
+    background: #263159;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.15);
+}
+
+.search-input {
+    color: #f5f6fa;
+}
+
+.search-input::placeholder {
+    color: #bfc8e2;
+}
+
+.search-btn {
+    color: #ff9800;
+}
+
+.search-toggle {
+    background: #1b2232;
+    color: #ff9800;
+}
+
+.search-toggle:hover {
+    background: #ff9800;
+    color: #263159;
+}
+
+/* CTA Button */
+.nav-cta {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #ff9800;
+    color: #263159;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cta-btn:hover {
+    background: #fb8c00;
+    color: #f5f6fa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(230, 126, 34, 0.4);
+}
+
+.cta-btn:active {
+    transform: translateY(-1px);
+}
+
 /* Navigation Bar */
 .navbar {
     position: fixed;
@@ -259,41 +376,6 @@ body {
     background: #e67e22;
     transform: scale(1.1);
 }
-
-/* CTA Button */
-.nav-cta {
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.cta-btn {
-    display: inline-block;
-    padding: 10px 24px;
-    background: #e67e22;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.cta-btn:hover {
-    background: #d35400;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(230, 126, 34, 0.4);
-}
-
-.cta-btn:active {
-    transform: translateY(-1px);
-}
-
-
 
 /* Responsive Design */
 
